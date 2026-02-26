@@ -220,4 +220,45 @@
 
 
 
+// 10) Factorial of a number
 
+// document.getElementById("fact-btn").addEventListener("click", () => {
+//     const value = document.getElementById("fact-input").value;
+
+//     let fact = 1;
+//     for(let i=value; i>0; i--){
+//         fact *= i;
+//     }
+
+//     document.getElementById("fact").innerText = "Factorial : " + fact;
+// })
+
+
+
+//  11) Palindrome or not
+
+// document.getElementById("palindrome-btn").addEventListener("click", () => {
+//     let str = document.getElementById("palindrome-input").value.toString();
+//     let revStr = "";
+
+//     for(let i=str.length-1; i>=0; i--){
+//         revStr += str[i];
+//     }
+    
+//     if(str == revStr)
+//         document.getElementById("palindrome").innerText = "Palindrome ? True";
+//     else
+//         document.getElementById("palindrome").innerText = "Palindrome ? False";
+// })
+
+// 12) Todo List App
+
+// document.getElementById("todo-btn").addEventListener("click", () => {
+//     const todo = document.getElementById("todo-input").value;
+//     document.getElementById("todo-input").value = "";
+
+//     let list = document.getElementById("todo");
+//     let liElement = document.createElement("li");
+//     liElement.innerText = todo;
+//     list.appendChild(liElement);
+// })
