@@ -1,0 +1,30 @@
+/*  3) StopWatch with 3 buttons for start, stop , restart */
+.stopWatch{
+    display: flex;
+}
+
+#traffic-light{
+    display: flex;
+    gap: 2rem;
+}
+
+#red, #yellow, #green{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+
+/* 9) Grid Layout in HTML-CSS */
+.container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(49, 43, 80);
+    gap: 10px;
+}
+
+.container div{
+    background-color: white;
+    padding: 10px;
+}
