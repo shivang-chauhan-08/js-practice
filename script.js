@@ -262,3 +262,63 @@
 //     liElement.innerText = todo;
 //     list.appendChild(liElement);
 // })
+
+
+// 13) Live Search Filter
+
+// const items = [
+//   "apple", "alien", "amazon", "banana", "ball",
+//   "cat", "car", "dog", "elephant", "fish"
+// ];
+
+// const searchInput = document.getElementById("search");
+// const results = document.getElementById("results");
+
+// searchInput.addEventListener("input", () => {
+//     const value = searchInput.value.toLowerCase();
+
+//     results.innerHTML = "";
+
+//     const filtered = items.filter(item => item.toLowerCase().includes(value));
+
+//     filtered.forEach(item => {
+//         const li = document.createElement("li");
+//         li.textContent = item;
+//         results.appendChild(li);
+//     });
+// })
+
+
+
+// 14) Debounced Live Search
+
+// const searchInput = document.getElementById("search");
+// const results = document.getElementById("results");
+
+// const items = [
+//   "apple", "alien", "amazon", "banana", "ball",
+//   "cat", "car", "dog", "elephant", "fish"
+// ];
+
+// function debounce(fn, delay){
+//     let timer;
+//     return function(){
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+//             fn();
+//         }, delay);
+//     }
+// }
+
+// function showResults(){
+//     const value = searchInput.value.toLowerCase();
+//     results.innerHTML = "";
+//     const filtered = items.filter(item => item.toLowerCase().includes(value));
+//     filtered.forEach(item => {
+//         const li = document.createElement("li");
+//         li.textContent = item;
+//         results.appendChild(li);
+//     });
+// }
+
+//searchInput.addEventListener("input", debounce(showResults, 500))
