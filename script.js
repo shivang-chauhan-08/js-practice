@@ -1,7 +1,5 @@
 // 1) Prime Number between 0 to n
 
-// const { use } = require("react");
-
 // function isPrime(n){
 //     if(n <= 1)
 //         return false;
@@ -339,8 +337,8 @@
 
 // 16) Using reduce, transform this into:
         // {
-        // 22: ["Shiv", "Raj", "Pooja"],
-        // 25: ["Amit", "Neha"]
+        //      22: ["Shiv", "Raj", "Pooja"],
+        //      25: ["Amit", "Neha"]
         // }
 
 // const users = [
@@ -439,3 +437,38 @@
 //         console.log(e);
 //     }
 // })();
+
+
+// 20) Dynamic Product Filter + Total Price
+
+// const products = [
+//   { id: 1, name: "Laptop", price: 50000 },
+//   { id: 2, name: "Phone", price: 20000 },
+//   { id: 3, name: "Tablet", price: 15000 },
+//   { id: 4, name: "Camera", price: 30000 }
+// ];
+
+// let list = document.getElementById("productList");
+// let price = document.getElementById("total");
+// function renderProducts(arr){
+//     list.innerHTML = "";
+//     price.innerText = "";
+//     arr.forEach(element => {
+//         let li = document.createElement("li");
+//         li.innerText = element.name;
+//         list.appendChild(li);
+//         price.innerText += element.price;
+//     });
+// };
+// renderProducts(products);
+
+// document.getElementById("search").addEventListener("input", () => {
+//     let value = document.getElementById("search").value.toLowerCase();
+
+//     let filtered = products.filter(item => item.name.toLowerCase().includes(value));
+
+//     renderProducts(filtered);
+// });
+
+
+// 21) 
