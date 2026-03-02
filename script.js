@@ -1,5 +1,7 @@
 // 1) Prime Number between 0 to n
 
+// const { use } = require("react");
+
 // function isPrime(n){
 //     if(n <= 1)
 //         return false;
@@ -322,3 +324,118 @@
 // }
 
 //searchInput.addEventListener("input", debounce(showResults, 500))
+
+
+// 15) Remove Duplicate from Array
+
+// const nums = [2, 2, 3, 4, 4, 5, 1];
+
+// function getUnique(arr){
+//     return arr.filter((item, index) => arr.indexOf(item) === index);
+// }
+
+// console.log(getUnique(nums));
+
+
+// 16) Using reduce, transform this into:
+        // {
+        // 22: ["Shiv", "Raj", "Pooja"],
+        // 25: ["Amit", "Neha"]
+        // }
+
+// const users = [
+//   { name: "Shiv", age: 22 },
+//   { name: "Amit", age: 25 },
+//   { name: "Raj", age: 22 },
+//   { name: "Neha", age: 25 },
+//   { name: "Pooja", age: 22 }
+// ];
+
+// const grouped = users.reduce((acc, user) => {
+//     if(!acc[user.age]){
+//         acc[user.age] = [];
+//     }
+//     acc[user.age].push(user.name);
+
+//     return acc;
+// }, {});
+
+// console.log(grouped);
+
+
+// 17) Using reduce, return:
+        // {
+        //   Shiv: 1200,
+        //   Amit: 400,
+        //   Raj: 200
+        // }
+
+// const orders = [
+//   { id: 1, user: "Shiv", amount: 500 },
+//   { id: 2, user: "Amit", amount: 300 },
+//   { id: 3, user: "Shiv", amount: 700 },
+//   { id: 4, user: "Raj", amount: 200 },
+//   { id: 5, user: "Amit", amount: 100 }
+// ];
+
+// const grouped = orders.reduce((acc, order) => {
+//     if(!acc[order.user]){
+//         acc[order.user] = 0;
+//     }
+//     acc[order.user] += order.amount;
+
+//     return acc;
+// }, {});
+
+// console.log(grouped);
+
+
+// 18) From the same orders array, return:
+        // [
+        //      { user: "Shiv", total: 1200 },
+        //      { user: "Amit", total: 400 },
+        //      { user: "Raj", total: 200 }
+        // ]
+
+// const orders = [
+//   { id: 1, user: "Shiv", amount: 500 },
+//   { id: 2, user: "Amit", amount: 300 },
+//   { id: 3, user: "Shiv", amount: 700 },
+//   { id: 4, user: "Raj", amount: 200 },
+//   { id: 5, user: "Amit", amount: 100 }
+// ];        
+
+// const grouped = orders.reduce((acc, { user, amount }) => {
+//     if (!acc[user]) {
+//       acc[user] = { user, total: 0 };
+//     }
+
+//     acc[user].total += amount;
+
+//     return acc;
+//   }, {})
+
+// console.log(grouped)
+
+
+// 19) Fetch users from API (use async/await), Filter only users with age >= 18
+// Map them into <li> elements, Render inside #userList, Handle errors properly
+
+// (async function loadUsers(){
+//     try{
+//         const users = [
+//             { id: 1, name: "Shiv", age: 22 },
+//             { id: 2, name: "Amit", age: 17 },
+//             { id: 3, name: "Neha", age: 25 }
+//         ];
+
+//         const filtered = users.filter(user => user.age >= 18).map(user => `
+//                 <li>${user.name} - ${user.age}</li>
+//             `).join("");
+
+//         document.getElementById("userList").innerHTML = filtered;
+//     }
+//     catch(e){
+//         console.log(e);
+//     }
+// })();
