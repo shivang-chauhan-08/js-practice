@@ -388,7 +388,7 @@
 // console.log(grouped);
 
 
-// 18) From the same orders array, return:
+// 18) From the same orders array, return :
         // [
         //      { user: "Shiv", total: 1200 },
         //      { user: "Amit", total: 400 },
@@ -471,4 +471,134 @@
 // });
 
 
-// 21) 
+// 21) Counter App With Limit
+
+// let inc = document.getElementById("inc")
+// let des = document.getElementById("dec")
+// let reset = document.getElementById("reset")
+// let counter = document.getElementById("count")
+// let count = 0;
+
+// inc.addEventListener("click", () => {
+//         if(count == 10){
+//                 return;
+//         }
+//         count++;
+//         counter.innerText = count;
+// });
+
+// des.addEventListener("click", () => {
+//         if(count == 0){
+//                 return;
+//         }
+//         count--;
+//         counter.innerText = count;
+// });
+
+// reset.addEventListener("click", () => {
+//         count = 0;
+//         counter.innerText = count;
+// });
+
+
+// 22) Find Longest word from given string
+
+// let str = "JavaScript is the best language in the world";
+// let longest = "";
+// let words = str.split(" ");
+
+// for(let i=0; i<words.length; i++){
+//         if(words[i].length > longest.length){
+//                 longest = words[i];
+//         }
+// }
+
+// console.log(longest);
+
+
+// 23) Live Character Counter
+// let counter = document.getElementById("count");
+
+// document.getElementById("message").addEventListener("input", () => {
+//         let value = document.getElementById("message").value.length;
+//         counter.innerText = value;
+// });
+
+
+// 24) Reverse Each Word (Not Whole String)
+// let str = "hello world js";
+// let words = str.split(" ");
+
+// for(let j=0; j<words.length; j++) {
+//         let rev = "";
+//         for(let i=words[j].length-1; i>=0; i--){
+//                 rev += words[j][i];
+//         };
+//         words[j] = rev;
+// };
+
+// let revStr = words.join(" ");
+// console.log(revStr);
+
+
+// 25) Move All Zeros to End
+
+// let nums = [0, 1, 0, 3, 12];
+// let count = 0;
+// let newNums = [];
+
+// for(let i=0; i<nums.length; i++){
+//         if(nums[i] === 0){
+//                 count++;
+//                 continue;
+//         }
+//         newNums.push(nums[i]);
+// }       
+
+// for(let i=0; i<count; i++){
+//         newNums.push(0);
+// }
+
+// console.log(newNums);
+
+
+// 26) Find Second Largest Number
+
+// let nums = [10, 5, 20, 8, 20];
+
+// let uniqueNums = nums.filter((num, index) => nums.indexOf(num) === index);
+// let max = uniqueNums[0];
+// let index = 0;
+
+// for(let i=1; i<uniqueNums.length; i++){
+//         if(uniqueNums[i] > max){
+//                 max = uniqueNums[i];
+//                 index = i;
+//         }
+// }
+
+// uniqueNums[index] = 0;
+// max = uniqueNums[0]
+
+// for(let i=1; i<uniqueNums.length; i++){
+//         if(uniqueNums[i] > max)
+//                 max = uniqueNums[i];
+// }
+
+// console.log(max);
+
+
+// 27) Create a btn that changes div between flex row & column
+
+// let btn = document.getElementById('btn');
+// let container = document.getElementById('container');
+
+// btn.addEventListener("click", () => {
+//         if(container.style.flexDirection == "column")
+//                 container.style.flexDirection ="row"
+//         else
+//                 container.style.flexDirection ="column"
+// })
+
+
+// 28) 
