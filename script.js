@@ -601,4 +601,36 @@
 // })
 
 
-// 28) 
+// 28) Divide the div into given number
+
+// let btn = document.getElementById("btn");
+// let right = document.getElementById("right");
+// let inp = document.getElementById("inp");
+
+// btn.addEventListener("click", () => {
+
+//     let n = Number(inp.value);
+
+//     if(n <= 0){
+//         alert("Enter valid number");
+//         return;
+//     }
+
+//     let width = right.clientWidth;
+
+//     if(width % n !== 0){
+//         alert("Div cannot be divided equally");
+//         return;
+//     }
+
+//     right.innerHTML = "";   // clear previous parts
+
+//     let partWidth = width / n;
+
+//     for(let i = 0; i < n; i++){
+//         let div = document.createElement("div");
+//         div.className = "part";
+//         div.style.width = partWidth + "px";
+//         right.appendChild(div);
+//     }
+// });
