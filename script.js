@@ -629,8 +629,48 @@
 
 //     for(let i = 0; i < n; i++){
 //         let div = document.createElement("div");
-//         div.className = "part";
+//         div.classList.add("part");
 //         div.style.width = partWidth + "px";
 //         right.appendChild(div);
 //     }
 // });
+
+
+// 29) Check if the number is Armstrong or not ???
+
+// document.getElementById("btn").addEventListener("click", () => {
+//         let value = document.getElementById("inp").value.toString();
+//         let arr = value.split('');
+//         let sum = 0;
+//         for(let i=0; i<arr.length; i++){
+//                 let num = 1;
+//                 for(let j=0; j<arr.length; j++){
+//                         num *= Number(arr[i]);
+//                 }
+//                 sum += num; 
+//         }
+//         if(sum === Number(value)){
+//                 alert("Armstrong");
+//         }
+//         else{
+//                 alert("faaaaaaaaaaa");
+//         }
+// })
+
+
+// 30) Check if the number is Anagram or not ???
+
+// document.getElementById("btn").addEventListener("click", () => {
+//         let val1 = document.getElementById("inp1").value.toLowerCase();
+//         let val2 = document.getElementById("inp2").value.toLowerCase();
+        
+//         let value1 = val1.split('').sort().join('');
+//         let value2 = val2.split('').sort().join('');
+
+//         if(value1 === value2){
+//                 alert("Anagram");
+//         }
+//         else{
+//                 alert("faaaaaaaaaaa");
+//         }
+// })

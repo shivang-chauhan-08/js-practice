@@ -102,3 +102,96 @@
 // console.log(stack.getAll()); // [10, 20]
 
 
+// 4) Generic Cache Class
+
+// class cache <T> {
+//     public store: Record<string, T> = {};
+
+//     public set(key: string, value: T): void {
+//         this.store[key] = value;
+//     }
+
+//     public get(key: string): T{
+//         return this.store[key];
+//     }
+
+//     public remove(key: string): void {
+//         delete this.store[key];
+//     }
+    
+//     public clear(): void {
+//         this.store = {};
+//     }
+// }
+
+// const userCache = new cache<{ id: number; name: string }>();
+
+// userCache.set("user1", { id: 1, name: "Shivang" });
+// userCache.set("user2", { id: 2, name: "Rahul" });
+// console.log(userCache);
+// console.log(userCache.get("user1"));
+// console.log(userCache.get("user2"));
+
+
+// 5) Generic Vehicle Storage System
+
+interface Vehicle {
+    id: number,
+    brand: string,
+    getDetails(): string
+}
+
+class Car implements Vehicle {
+    id: number
+    brand: string
+    doors: number
+    
+    public constructor(id: number, brand: string, doors: number){
+        this.id = id;
+        this.brand = brand;
+        this.doors = doors;
+    }
+
+    public getDetails(): string {
+        return `${this.id} vehicle is of ${this.brand} brand & have ${this.doors} doors.`;
+    }
+}
+
+class Bike implements Vehicle {
+    id: number
+    brand: string
+    hasCarrier: boolean
+    
+    public constructor(id: number, brand: string, hasCarrier: boolean){
+        this.id = id;
+        this.brand = brand;
+        this.hasCarrier = hasCarrier;
+    }
+
+    public getDetails(): string {
+        return `${this.id} vehicle is of ${this.brand} brand & have ${this.hasCarrier} doors.`;
+    }
+}
+
+class VehicleRepository<T extends Vehicle> {
+    repo: T[] = [];
+
+    add(vehicle: T): void {
+        this.repo.push(vehicle);
+    }
+
+    getAll(): T[] {
+        return this.repo;
+    }
+
+    findById(id: number): T {
+        return this.repo.filter(item => item.id === id)[0];
+    }
+}
+
+const carRepo = new VehicleRepository<Car>();
+
+carRepo.add(new Car(1, "Toyota", 4));
+carRepo.add(new Car(2, "BMW", 2));
+
+console.log(carRepo.getAll());
