@@ -674,3 +674,83 @@
 //                 alert("faaaaaaaaaaa");
 //         }
 // })
+
+
+// 31) FizzBuzz
+//      Rules:
+//      divisible by 3 → Fizz
+//      divisible by 5 → Buzz
+//      divisible by both → FizzBuzz
+
+// document.getElementById("btn").addEventListener("click", () => {
+//   let value = document.getElementById("inp").value;
+//   let list = document.getElementById("list");
+//   list.innerText = "";
+
+//   for(let i=1; i<=value; i++){
+//     let li = document.createElement("li");
+//     if(i % 3 === 0 && i % 5 === 0){
+//       // fizz-buzz
+//       li.innerText = "Fizz-Buzz";
+//     }
+//     else if(i % 3 === 0){
+//       // fizz
+//       li.innerText = "Fizz";
+//     }
+//     else if(i % 5 === 0){
+//       // buzz
+//       li.innerText = "Buzz";
+//     }
+//     else{
+//       li.innerText = i;
+//     }
+//     list.appendChild(li);
+//   }
+// })
+
+
+// 32) Count Character Frequency
+
+// const str = "hello";
+// let freq = {};
+
+// for(let char of str){
+//   freq[char] = (freq[char] || 0) + 1;
+// }
+
+// console.log(freq);
+
+
+// 33) Flatten Array
+
+// let arr = [1,[2,3],[4,[5]]];
+
+// console.log(arr.flat(Infinity));
+
+// or
+
+// console.log(arr.reduce((acc, curr) => {
+//   return acc.concat(curr);
+// }, []));
+
+// or
+
+// console.log(arr.flat(Infinity));
+
+// function flatten(arr) {
+//     let result = [];
+
+//     for (let item of arr) {
+//         if (Array.isArray(item)) {
+//             result = result.concat(flatten(item));
+//         } else {
+//             result.push(item);
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(flatten(arr));
+
+
